@@ -19,7 +19,7 @@ const Orderform = ({ bikes }) => {
 
         //console.log(data);
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://hidden-dusk-70127.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added Successfully")

@@ -6,7 +6,7 @@ const Allorders = () => {
     const [allorders, setAllorders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://hidden-dusk-70127.herokuapp.com/orders')
             .then(res => res.json()
                 .then(data => setAllorders(data)))
 
@@ -16,7 +16,7 @@ const Allorders = () => {
         console.log(id);
         const proceed = window.confirm('Are you sure, you want to delete order?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://hidden-dusk-70127.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -33,7 +33,7 @@ const Allorders = () => {
     const handelAcceptOrder = id => {
         const proceed = window.confirm('Are you sure, you want to Accept order?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://hidden-dusk-70127.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
